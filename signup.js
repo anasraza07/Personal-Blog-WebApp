@@ -1,6 +1,28 @@
-import { auth, createUserWithEmailAndPassword } from "./firebase.js";
+import {
+  auth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "./firebase.js";
 
 const signupBtn = document.getElementById("signup");
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // console.log(location.pathname);
+    if (location.pathname !== "/index.html") {
+      location.href = "./index.html";
+    }
+    console.log(user);
+    // ...
+  } else if (location.pathname !== "/signup.html") {
+    location.replace("./signup.html");
+
+    // console.log("user not found");
+    // User is signed out
+    // ...
+  }
+});
+
 const signupFunc = () => {
   const firstName = document.getElementById("fName");
   const lastName = document.getElementById("lName");
