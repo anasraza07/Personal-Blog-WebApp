@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: rgb(239, 239, 239);
+}
+
 .navbar {
     padding: 10px 45px;
     background-color: purple;
@@ -32,19 +36,29 @@ nav button:hover {
 }
 
 main {
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
 
-input {
+.form input {
     padding: 9px;
+    width: 70%;
     margin: 7px;
+    border-radius: 4px;
+    border-width: thin;
+    /* border-style: solid; */
+    border-color: 1px solid #555;
+    /* border: none; */
 }
 
 .form {
+    width: 20%;
+    background-color: #fff;
+    padding: 25px 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,8 +67,9 @@ input {
 }
 
 .form button {
-    padding: 8px;
-    width: 40%;
+    margin: 7px;
+    padding: 12px 15px;
+    width: 30%;
     background-color: rgb(59, 166, 211);
     border: none;
     color: white;
@@ -64,4 +79,43 @@ input {
 a,
 button {
     cursor: pointer;
+}
+
+/* .main{
+} */
+.blog-input-container {
+    background-color: white;
+    /* border: 1px solid black; */
+    margin: 12px 45px;
+    padding: 30px;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.blog-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-input input,
+textarea {
+    padding: 10px;
+    margin: 8px 0;
+    resize: none;
+}
+
+#blog-text {
+    height: 100px;
+}
+
+.blog-btn {
+    width: 15%;
+    padding: 8px;
+    margin: 8px 0;
+
+    /* width: 40%; */
+    background-color: rgb(59, 166, 211);
+    border: none;
+    border-radius: 8px;
+    color: white;
 }
